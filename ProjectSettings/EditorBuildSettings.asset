@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/PetAlien.unity
+    guid: fa25420e84a3e464198c6eaf2adf5587
   m_configObjects: {}
