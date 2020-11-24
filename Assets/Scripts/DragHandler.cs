@@ -5,19 +5,28 @@ using UnityEngine.EventSystems;
 
 public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    public enum Meters { Hunger, Happiness, Curiosity};
+    public enum Meters { Hunger, Happiness, Curiosity, Hunger1, Happiness1, Curiosity1};
     [SerializeField] int val;
     [SerializeField] Meters meter;
     Vector3 startPos;
 
-
+    public Timer timer;
     public Transform alien;
+    public bool canDrag;
+
+    private void Start()
+    {
+        canDrag = true;
+    }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        startPos = this.transform.position;
-        this.GetComponent<CanvasGroup>().blocksRaycasts = false;
-        alien.GetComponent<MyAlien>().notOnMe = true;
+        if (canDrag)
+        {
+            startPos = this.transform.position;
+            this.GetComponent<CanvasGroup>().blocksRaycasts = false;
+            alien.GetComponent<MyAlien>().notOnMe = true;
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -56,10 +65,23 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                 alien.GetComponent<MyAlienManager>().meters[2] += val;
                 break;
 
+            case Meters.Hunger1:
+                alien.GetComponent<MyAlienManager>().meters[0] += val;
+                break;
+
+            case Meters.Happiness1:
+                alien.GetComponent<MyAlienManager>().meters[1] += val;
+                break;
+
+            case Meters.Curiosity1:
+                alien.GetComponent<MyAlienManager>().meters[2] += val;
+                break;
+
             default:
                 break;
         }
-        Debug.Log(val);
+
+        if(timer!=null) timer.Time();
         MyAlien.OnSomethingDropped -= DroppedOnAlien;
     }
 }

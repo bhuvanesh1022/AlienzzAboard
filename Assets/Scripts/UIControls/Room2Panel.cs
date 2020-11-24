@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Room2Panel : Base_UIPanel
 {
@@ -13,11 +14,34 @@ public class Room2Panel : Base_UIPanel
     {
         base.OpenBehavior();
 
+        myAlien.DOPunchRotation(new Vector3(0f, 0f, -45f), .25f);
+
         itemHolderParent = transform.GetChild(0).transform;
         nextBtn.SetActive(false);
         prevBtn.SetActive(true);
+
         for (int i = 0; i < itemHolderParent.childCount; i++)
             if (!itemHolders.Contains(itemHolderParent.GetChild(i).transform))
                 itemHolders.Add(itemHolderParent.GetChild(i).transform);
+
+        StartCoroutine("SettleHolders");
     }
+
+    IEnumerator SettleHolders()
+    {
+        yield return new WaitForEndOfFrame();
+
+        for (int i = 0; i < itemHolders.Count; i++)
+        {
+            itemHolders[i].DOBlendableMoveBy(new Vector3(0, -400f, 0), 0f);
+            yield return null;
+        }
+
+        for (int i = 0; i < itemHolders.Count; i++)
+        {
+            itemHolders[i].DOBlendableMoveBy(new Vector3(0, 400f, 0), .25f).SetEase(Ease.OutElastic);
+            yield return new WaitForSeconds(.125f);
+        }
+    }
+
 }
