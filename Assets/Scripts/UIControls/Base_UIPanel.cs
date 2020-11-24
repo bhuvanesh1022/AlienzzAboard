@@ -6,6 +6,7 @@ using UnityEngine;
 public class Base_UIPanel : MonoBehaviour 
 {
     public bool isOpen = false;
+    public Transform myAlien;
 
     public virtual void OpenBehavior()
     {
