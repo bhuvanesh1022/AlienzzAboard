@@ -3728,6 +3728,7 @@ GameObject:
   - component: {fileID: 1915210188}
   - component: {fileID: 1915210190}
   - component: {fileID: 1915210189}
+  - component: {fileID: 1915210191}
   m_Layer: 5
   m_Name: HungerHolder
   m_TagString: Untagged
@@ -3792,6 +3793,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1915210187}
   m_CullTransparentMesh: 0
+--- !u!114 &1915210191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915210187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d93a621e61c149198d22305c45a17da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  msToWait: 5000
+  decayRate: 0.5
+  interactable: {fileID: 751071238}
+  orderNo: 0
+  alien: {fileID: 817409628}
 --- !u!1 &1918005773
 GameObject:
   m_ObjectHideFlags: 0

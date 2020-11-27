@@ -7,10 +7,9 @@ public class Timer : MonoBehaviour
 {
     public float msToWait = 5000.0f ;
     public Image interactable;
-    private ulong lastClicked;
-    //private List<ulong> clicks = new List<ulong>();
-    //public Text timer;
     public int orderNo;
+
+    private ulong lastClicked;
 
     private bool IsReady()
     {
@@ -21,8 +20,6 @@ public class Timer : MonoBehaviour
 
         if (secondsleft < 0)
         {
-            //timer.text = "ready";
-            //timerButton.interactable = true;
             interactable.raycastTarget = true;
             interactable.color = new Color(interactable.color.r, interactable.color.g, interactable.color.b, 1);
             return true;
@@ -32,7 +29,6 @@ public class Timer : MonoBehaviour
 
     private void Start()
     {
-        //lastClicked = ulong.Parse(PlayerPrefs.GetString("LastClicked"));
         if (PlayerPrefs.HasKey(string.Format("{0} Clicked", orderNo)))
         {
             lastClicked = ulong.Parse(PlayerPrefs.GetString(string.Format("{0} Clicked", orderNo)));
@@ -54,14 +50,13 @@ public class Timer : MonoBehaviour
                 interactable.raycastTarget = true;
                 float a = interactable.color.a;
                 interactable.color = new Color(interactable.color.r, interactable.color.g, interactable.color.b, 1);
-                //timer.text = "Ready";
                 return;
             }
             
             ulong diff = ((ulong) DateTime.Now.Ticks - lastClicked);
             ulong m = diff / TimeSpan.TicksPerMillisecond;
             float secondsleft = (float)(msToWait - m) / 1000.0f;
-
+            Debug.Log(secondsleft);
             string r = "";
             //hrs
             r += ((int) secondsleft / 3600).ToString() + "h ";
