@@ -12,6 +12,8 @@ public class MyAlienManager : MonoBehaviour
         {
             string key = string.Format("meter_{0}", i + 1);
             meters[i] = PlayerPrefs.GetFloat(key, 50);
+            if (meters[i] < 0)
+                meters[i] = 0; 
         }
 	}
 

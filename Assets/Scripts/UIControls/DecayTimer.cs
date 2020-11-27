@@ -36,18 +36,15 @@ public class DecayTimer : MonoBehaviour
         if (PlayerPrefs.HasKey(string.Format("{0} Has Updated", orderNo)))
         {
             lastClicked = ulong.Parse(PlayerPrefs.GetString(string.Format("{0} Has Updated", orderNo)));
-            PlayerPrefs.DeleteKey(string.Format("{0} Has Updated", orderNo));
 
             ulong diff = ((ulong)DateTime.Now.Ticks - lastClicked);
             float elepseSeconds = (diff / TimeSpan.TicksPerMillisecond)/1000f;
 
             Debug.Log("elepseSeconds " + elepseSeconds);
 
-            alien.meters[orderNo] -= elepseSeconds * decayRate;
-        }
-        else
-        {
-            //Timer();
+            alien.meters[orderNo] -= Mathf.Clamp(elepseSeconds * decayRate, 0f, 100f);
+            if (alien.meters[orderNo] < 0)
+                alien.meters[orderNo] = 0;
         }
         //if (!IsReady())
         //{
@@ -61,6 +58,9 @@ public class DecayTimer : MonoBehaviour
 	private void Update()
 	{
         alien.meters[orderNo] -= Time.deltaTime * decayRate;
+        if (alien.meters[orderNo] < 0)
+            alien.meters[orderNo] = 0;
+            
 	}
 
 	private void FixedUpdate()
@@ -112,6 +112,19 @@ public class DecayTimer : MonoBehaviour
         {
             lastClicked = (ulong)DateTime.Now.Ticks;
             PlayerPrefs.SetString(string.Format("{0} Has Updated", orderNo), lastClicked.ToString());
+        }
+        else
+        {
+            lastClicked = ulong.Parse(PlayerPrefs.GetString(string.Format("{0} Has Updated", orderNo)));
+
+            ulong diff = ((ulong)DateTime.Now.Ticks - lastClicked);
+            float elepseSeconds = (diff / TimeSpan.TicksPerMillisecond) / 1000f;
+
+            Debug.Log("elepseSeconds " + elepseSeconds);
+
+            alien.meters[orderNo] -= elepseSeconds * decayRate;
+            if (alien.meters[orderNo] < 0)
+                alien.meters[orderNo] = 0;
         }
 
     }
