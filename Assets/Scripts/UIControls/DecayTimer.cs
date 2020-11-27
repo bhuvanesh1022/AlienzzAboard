@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class DecayTimer : MonoBehaviour
 {
-    public float msToWait = 5000.0f;
     public float decayRate;
     public Image interactable;
     public int orderNo;
@@ -18,17 +17,17 @@ public class DecayTimer : MonoBehaviour
         //ulong m = diff / TimeSpan.TicksPerMillisecond;
         //float secondsleft = (float)(msToWait - m) / 1000.0f;
         //Debug.Log(secondsleft / 100);
-        ulong diff = ((ulong)DateTime.Now.Ticks - lastClicked);
-        ulong m = diff / TimeSpan.TicksPerMillisecond;
-        float secondsleft = (float)(msToWait - m) / 1000.0f;
-        alien.meters[0] -= Time.deltaTime * decayRate;
+        /*ulong diff = ((ulong)DateTime.Now.Ticks - lastClicked);
+        ulong m = (diff / TimeSpan.TicksPerMillisecond);
+        float secondsleft = (float)(msToWait - m)/1000f;
 
+        Debug.Log(secondsleft);
         if (secondsleft < 0)
         {
             //    interactable.raycastTarget = true;
             //    interactable.color = new Color(interactable.color.r, interactable.color.g, interactable.color.b, 1);
             return true;
-        }
+        }*/
         return false;
     }
 
@@ -38,6 +37,13 @@ public class DecayTimer : MonoBehaviour
         {
             lastClicked = ulong.Parse(PlayerPrefs.GetString(string.Format("{0} Has Updated", orderNo)));
             PlayerPrefs.DeleteKey(string.Format("{0} Has Updated", orderNo));
+
+            ulong diff = ((ulong)DateTime.Now.Ticks - lastClicked);
+            float elepseSeconds = (diff / TimeSpan.TicksPerMillisecond)/1000f;
+
+            Debug.Log("elepseSeconds " + elepseSeconds);
+
+            alien.meters[orderNo] -= elepseSeconds * decayRate;
         }
         else
         {
@@ -52,7 +58,12 @@ public class DecayTimer : MonoBehaviour
         //Debug.Log(DateTime.);
     }
 
-    private void FixedUpdate()
+	private void Update()
+	{
+        alien.meters[orderNo] -= Time.deltaTime * decayRate;
+	}
+
+	private void FixedUpdate()
     {
         //if (!interactable.raycastTarget)
         //{
@@ -83,16 +94,32 @@ public class DecayTimer : MonoBehaviour
         //}
         
 
-        if (IsReady())
+        /*if (IsReady())
         {
             ulong diff = ((ulong)DateTime.Now.Ticks - lastClicked);
             ulong m = diff / TimeSpan.TicksPerMillisecond;
             float secondsleft = (float)(msToWait - m) / 1000.0f;
-            alien.meters[0] -= Time.deltaTime * decayRate;
+
             
-            //Debug.Log(secondsleft);
+            Debug.Log(secondsleft);
+        }*/
+        //Debug.Log(interactable.fillAmount);
+    }
+
+    private void OnApplicationPause(bool pause)
+    {
+        if(pause)
+        {
+            lastClicked = (ulong)DateTime.Now.Ticks;
+            PlayerPrefs.SetString(string.Format("{0} Has Updated", orderNo), lastClicked.ToString());
         }
-        Debug.Log(interactable.fillAmount);
+
+    }
+
+    private void OnApplicationQuit()
+    {
+        lastClicked = (ulong)DateTime.Now.Ticks;
+        PlayerPrefs.SetString(string.Format("{0} Has Updated", orderNo), lastClicked.ToString());
     }
 
     public void Timer()

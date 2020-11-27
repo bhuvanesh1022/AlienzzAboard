@@ -794,6 +794,7 @@ GameObject:
   - component: {fileID: 408006267}
   - component: {fileID: 408006269}
   - component: {fileID: 408006268}
+  - component: {fileID: 408006270}
   m_Layer: 5
   m_Name: CuriosityHolder
   m_TagString: Untagged
@@ -858,6 +859,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 408006266}
   m_CullTransparentMesh: 0
+--- !u!114 &408006270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408006266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d93a621e61c149198d22305c45a17da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  decayRate: 1.5
+  interactable: {fileID: 786201624}
+  orderNo: 2
+  alien: {fileID: 817409628}
 --- !u!1001 &467968321
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3653,6 +3670,7 @@ GameObject:
   - component: {fileID: 1852487815}
   - component: {fileID: 1852487817}
   - component: {fileID: 1852487816}
+  - component: {fileID: 1852487818}
   m_Layer: 5
   m_Name: HappinessHolder
   m_TagString: Untagged
@@ -3717,6 +3735,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1852487814}
   m_CullTransparentMesh: 0
+--- !u!114 &1852487818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852487814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d93a621e61c149198d22305c45a17da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  decayRate: 1
+  interactable: {fileID: 1218352166}
+  orderNo: 1
+  alien: {fileID: 817409628}
 --- !u!1 &1915210187
 GameObject:
   m_ObjectHideFlags: 0
@@ -3805,7 +3839,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d93a621e61c149198d22305c45a17da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  msToWait: 5000
   decayRate: 0.5
   interactable: {fileID: 751071238}
   orderNo: 0
