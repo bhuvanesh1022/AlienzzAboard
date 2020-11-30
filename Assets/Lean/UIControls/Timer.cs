@@ -8,7 +8,7 @@ public class Timer : MonoBehaviour
     public float msToWait = 5000.0f ;
     public Image interactable;
     public int orderNo;
-
+    public Text timer;
     private ulong lastClicked;
 
     private bool IsReady()
@@ -47,6 +47,7 @@ public class Timer : MonoBehaviour
         {
             if (IsReady())
             {
+                timer.text = " ";
                 interactable.raycastTarget = true;
                 float a = interactable.color.a;
                 interactable.color = new Color(interactable.color.r, interactable.color.g, interactable.color.b, 1);
@@ -59,7 +60,7 @@ public class Timer : MonoBehaviour
             Debug.Log(secondsleft);
             string r = "";
             //hrs
-            r += ((int) secondsleft / 3600).ToString() + "h ";
+            //r += ((int) secondsleft / 3600).ToString() + "h ";
             secondsleft -= ((int) secondsleft / 3600) * 3600;
             
             //min
@@ -68,7 +69,7 @@ public class Timer : MonoBehaviour
             //sec
             r += (secondsleft % 60).ToString("00") + "s";
 
-            //timer.text = r;
+            timer.text = r;
         }
     }
     

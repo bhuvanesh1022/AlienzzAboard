@@ -10,7 +10,9 @@ public class DecayTimer : MonoBehaviour
     public int orderNo;
     public MyAlienManager alien;
     private ulong lastClicked;
-
+    public Image meter;
+    public Text metercount;
+    
     private bool IsReady()
     {
         //ulong diff = ((ulong)DateTime.Now.Ticks - lastClicked);
@@ -57,11 +59,12 @@ public class DecayTimer : MonoBehaviour
 
 	private void Update()
 	{
+        float amt = meter.fillAmount;
+        metercount.text = (amt * 100).ToString("F0");
         alien.meters[orderNo] -= Time.deltaTime * decayRate;
         if (alien.meters[orderNo] < 0)
             alien.meters[orderNo] = 0;
-            
-	}
+    }
 
 	private void FixedUpdate()
     {

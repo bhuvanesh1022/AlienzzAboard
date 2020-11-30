@@ -24,7 +24,7 @@ public class Room1Panel : Base_UIPanel
             if (!itemHolders.Contains(itemHolderParent.GetChild(i).transform))
                 itemHolders.Add(itemHolderParent.GetChild(i).transform);
 
-        StartCoroutine("SettleHolders");
+        StartCoroutine(nameof(SettleHolders));
     }
 
     IEnumerator SettleHolders()
