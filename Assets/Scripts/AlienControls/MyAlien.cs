@@ -12,9 +12,9 @@ public class MyAlien : MonoBehaviour
     public static SomethingDropped OnSomethingDropped;
 
     public SpriteRenderer alien;
+
     public List<Sprite> faces = new List<Sprite>();
     public List<Image> meters = new List<Image>();
- 
     public bool notOnMe;
 
     float petDuration;
@@ -55,8 +55,8 @@ public class MyAlien : MonoBehaviour
     {
         Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
-
-        if(hit.transform == transform)
+        
+        if(hit.transform == transform  )
             switch (interaction)
             {
                 case UserInteraction.Started:

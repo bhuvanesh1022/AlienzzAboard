@@ -20,42 +20,314 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76486ccf-89bd-47ea-8bde-8dcd2f3ab896" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.AlienzzAboard/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.AlienzzAboard/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.AlienzzAboard/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.AlienzzAboard/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.AlienzzAboard/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.AlienzzAboard/riderModule.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Lean/UIControls.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Lean/UIControls/Base_UIPanel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Lean/UIControls/Base_UIPanel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Lean/UIControls/DecayTimer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Lean/UIControls/DecayTimer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Lean/UIControls/Room1Panel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Lean/UIControls/Room1Panel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Lean/UIControls/Room2Panel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Lean/UIControls/Room2Panel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Lean/UIControls/Timer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Lean/UIControls/Timer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Lean/UIControls/UI_Controller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Lean/UIControls/UI_Controller.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Holder.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Holder.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AlienChange.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AlienChange.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Dead (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Dead (1).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Dead (10).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Dead (10).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Dead (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Dead (2).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Dead (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Dead (3).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Dead (4).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Dead (4).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Dead (5).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Dead (5).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Dead (6).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Dead (6).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Dead (7).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Dead (7).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Dead (8).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Dead (8).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Dead (9).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Dead (9).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Fall (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Fall (1).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Fall (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Fall (2).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Fall (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Fall (3).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Fall (4).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Fall (4).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Fall (5).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Fall (5).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Fall (6).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Fall (6).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Fall (7).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Fall (7).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Fall (8).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Fall (8).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Hurt (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Hurt (1).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Hurt (10).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Hurt (10).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Hurt (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Hurt (2).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Hurt (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Hurt (3).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Hurt (4).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Hurt (4).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Hurt (5).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Hurt (5).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Hurt (6).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Hurt (6).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Hurt (7).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Hurt (7).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Hurt (8).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Hurt (8).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Hurt (9).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Hurt (9).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Idle (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Idle (1).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Idle (10).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Idle (10).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Idle (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Idle (2).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Idle (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Idle (3).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Idle (4).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Idle (4).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Idle (5).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Idle (5).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Idle (6).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Idle (6).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Idle (7).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Idle (7).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Idle (8).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Idle (8).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Idle (9).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Idle (9).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Jump (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Jump (1).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Jump (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Jump (2).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Jump (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Jump (3).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Jump (4).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Jump (4).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Jump (5).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Jump (5).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Jump (6).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Jump (6).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Jump (7).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Jump (7).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Jump (8).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Jump (8).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Run (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Run (1).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Run (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Run (2).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Run (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Run (3).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Run (4).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Run (4).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Run (5).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Run (5).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Run (6).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Run (6).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Run (7).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Run (7).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Run (8).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Run (8).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Slide (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Slide (1).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Slide (10).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Slide (10).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Slide (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Slide (2).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Slide (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Slide (3).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Slide (4).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Slide (4).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Slide (5).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Slide (5).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Slide (6).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Slide (6).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Slide (7).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Slide (7).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Slide (8).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Slide (8).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Slide (9).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Slide (9).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Walk (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Walk (1).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Walk (10).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Walk (10).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Walk (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Walk (2).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Walk (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Walk (3).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Walk (4).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Walk (4).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Walk (5).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Walk (5).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Walk (6).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Walk (6).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Walk (7).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Walk (7).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Walk (8).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Walk (8).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Walk (9).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cat/Walk (9).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Dead (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Dead (1).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Dead (10).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Dead (10).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Dead (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Dead (2).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Dead (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Dead (3).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Dead (4).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Dead (4).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Dead (5).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Dead (5).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Dead (6).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Dead (6).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Dead (7).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Dead (7).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Dead (8).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Dead (8).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Dead (9).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Dead (9).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Fall (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Fall (1).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Fall (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Fall (2).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Fall (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Fall (3).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Fall (4).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Fall (4).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Fall (5).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Fall (5).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Fall (6).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Fall (6).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Fall (7).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Fall (7).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Fall (8).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Fall (8).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Hurt (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Hurt (1).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Hurt (10).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Hurt (10).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Hurt (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Hurt (2).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Hurt (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Hurt (3).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Hurt (4).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Hurt (4).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Hurt (5).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Hurt (5).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Hurt (6).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Hurt (6).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Hurt (7).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Hurt (7).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Hurt (8).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Hurt (8).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Hurt (9).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Hurt (9).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Idle (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Idle (1).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Idle (10).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Idle (10).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Idle (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Idle (2).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Idle (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Idle (3).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Idle (4).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Idle (4).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Idle (5).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Idle (5).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Idle (6).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Idle (6).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Idle (7).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Idle (7).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Idle (8).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Idle (8).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Idle (9).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Idle (9).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Jump (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Jump (1).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Jump (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Jump (2).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Jump (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Jump (3).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Jump (4).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Jump (4).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Jump (5).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Jump (5).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Jump (6).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Jump (6).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Jump (7).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Jump (7).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Jump (8).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Jump (8).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Run (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Run (1).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Run (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Run (2).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Run (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Run (3).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Run (4).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Run (4).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Run (5).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Run (5).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Run (6).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Run (6).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Run (7).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Run (7).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Run (8).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Run (8).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Slide (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Slide (1).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Slide (10).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Slide (10).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Slide (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Slide (2).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Slide (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Slide (3).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Slide (4).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Slide (4).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Slide (5).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Slide (5).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Slide (6).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Slide (6).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Slide (7).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Slide (7).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Slide (8).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Slide (8).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Slide (9).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Slide (9).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Walk (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Walk (1).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Walk (10).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Walk (10).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Walk (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Walk (2).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Walk (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Walk (3).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Walk (4).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Walk (4).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Walk (5).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Walk (5).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Walk (6).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Walk (6).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Walk (7).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Walk (7).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Walk (8).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Walk (8).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Walk (9).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/dog/Walk (9).png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AlienzzAboard/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AlienzzAboard/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AlienzzAboard/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AlienzzAboard/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AlienzzAboard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AlienzzAboard/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lean/UIControls/Base_UIPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lean/UIControls/Base_UIPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lean/UIControls/Room1Panel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lean/UIControls/Room1Panel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/PetAlien.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PetAlien.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIControls.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIControls/Base_UIPanel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIControls/Base_UIPanel.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIControls/DecayTimer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIControls/DecayTimer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIControls/Room1Panel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIControls/Room1Panel.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIControls/Room2Panel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIControls/Room2Panel.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIControls/Timer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIControls/Timer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIControls/UI_Controller.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIControls/UI_Controller.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AlienControls/MyAlien.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AlienControls/MyAlien.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DragHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DragHandler.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,14 +337,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AlienChange.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/UIControls/Timer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UIControls/DecayTimer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UIControls/Base_UIPanel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Lean/UIControls/Room1Panel.cs" />
         <option value="$PROJECT_DIR$/Assets/Lean/UIControls/DecayTimer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AlienManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AlienControls/MyAlien.cs" />
+        <option value="$PROJECT_DIR$/Assets/Lean/UIControls/Base_UIPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Lean/UIControls/Room1Panel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DragHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AlienChange.cs" />
       </list>
     </option>
   </component>
@@ -128,6 +408,8 @@
       <updated>1606542199983</updated>
       <workItem from="1606542255860" duration="1706000" />
       <workItem from="1606551080559" duration="2803000" />
+      <workItem from="1606800643336" duration="1556000" />
+      <workItem from="1606805721045" duration="6658000" />
     </task>
     <servers />
   </component>

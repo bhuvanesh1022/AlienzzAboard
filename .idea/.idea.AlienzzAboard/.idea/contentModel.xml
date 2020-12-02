@@ -105,6 +105,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="AlienChange.cs" t="Include" />
           <e p="AlienControls" t="Include">
             <e p="MyAlien.cs" t="Include" />
             <e p="MyAlienManager.cs" t="Include" />

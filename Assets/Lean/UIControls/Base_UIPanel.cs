@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,7 +7,7 @@ public class Base_UIPanel : MonoBehaviour
 {
     public bool isOpen = false;
     public Transform myAlien;
-
+  
     public virtual void OpenBehavior()
     {
         if (!isOpen)
