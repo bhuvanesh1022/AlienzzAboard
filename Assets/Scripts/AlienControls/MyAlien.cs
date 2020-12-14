@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MyAlien : MonoBehaviour
 {
-    public enum UserInteraction { Started, Holding, Released};
+    public enum UserInteraction { Started, Holding, Released,Dropped};
     public UserInteraction interaction;
 
     public delegate void SomethingDropped();
@@ -16,7 +16,7 @@ public class MyAlien : MonoBehaviour
     public List<Sprite> faces = new List<Sprite>();
     public List<Image> meters = new List<Image>();
     public bool notOnMe;
-
+    public bool dropped = false;
     float petDuration;
     
     // Start is called before the first frame update
@@ -29,9 +29,10 @@ public class MyAlien : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i < meters.Count; i++) meters[i].fillAmount = GetComponent<MyAlienManager>().meters[i]/100;
+       
+            for (int i = 0; i < meters.Count; i++) meters[i].fillAmount = GetComponent<MyAlienManager>().meters[i]/100;
 
-        if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0))
         {
             interaction = UserInteraction.Started;
             OnHitfeedback();
@@ -48,6 +49,29 @@ public class MyAlien : MonoBehaviour
             interaction = UserInteraction.Released;
             OnHitfeedback();
             notOnMe = true;
+        }
+
+        for (int i = 0; i < meters.Count; i++)
+        {
+            if (meters[i].fillAmount <= 0.30f && interaction != UserInteraction.Holding && dropped==false)
+            {
+                alien.sprite = faces[0];
+                return;
+            }
+            if (meters[i].fillAmount <= 0.30f && interaction == UserInteraction.Holding && dropped==false)
+            {
+                alien.sprite = faces[1];
+                return;
+            }
+            if (meters[i].fillAmount > 0.30f && dropped==false)
+            {
+                alien.sprite = faces[2];
+            }
+
+            if (dropped==true)
+            {
+                StartCoroutine(ChangeOnDropped());
+            }
         }
     }
 
@@ -70,12 +94,22 @@ public class MyAlien : MonoBehaviour
                     break;
 
                 case UserInteraction.Released:
-                    alien.sprite = faces[3];
                     OnSomethingDropped?.Invoke();
+                    dropped = true;
                     break;
-
+                
                 default:
                     break;
             }
     }
+
+    IEnumerator ChangeOnDropped()
+    {
+        alien.sprite = faces[1];
+        Debug.Log("change");
+        yield return new WaitForSeconds(0.3f);
+        dropped = false;
+    }
+    
+    
 }

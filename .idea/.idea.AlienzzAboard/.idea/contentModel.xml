@@ -110,7 +110,10 @@
             <e p="MyAlien.cs" t="Include" />
             <e p="MyAlienManager.cs" t="Include" />
           </e>
+          <e p="ClickHandler.cs" t="Include" />
           <e p="DragHandler.cs" t="Include" />
+          <e p="OnClickOpen.cs" t="Include" />
+          <e p="TimerClickable.cs" t="Include" />
         </e>
       </e>
       <e p="LeanCommon.csproj" t="IncludeRecursive" />

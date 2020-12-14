@@ -8,21 +8,7 @@ public class Room1Panel : Base_UIPanel
 {
     public GameObject nextBtn, prevBtn;
     public List<Transform> itemHolders = new List<Transform>();
-    //public AlienChange alienChange;
     Transform itemHolderParent;
-    
-    // private void Update()
-    // {
-    //     if (alienChange.alien1)
-    //     {
-    //         myAlien.transform.position = alienChange.Alien1.transform.position;
-    //     }
-    //     else if (alienChange.alien2)
-    //     {
-    //         myAlien.transform.position = alienChange.Alien2.transform.position;
-    //     }   
-    //     
-    // }
 
     public override void OpenBehavior()
     {

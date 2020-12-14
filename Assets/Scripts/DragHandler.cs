@@ -6,15 +6,17 @@ using UnityEngine.EventSystems;
 
 public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    public enum Meters { Hunger, Happiness, Curiosity, Hunger1, Happiness1, Curiosity1};
+    public enum Meters { Hunger, Happiness, Curiosity, Hunger1, Happiness1, Curiosity1 , Null};
     [SerializeField] int val;
+    [SerializeField] int val2;
     [SerializeField] Meters meter;
-    
+    [SerializeField] Meters meter2;
     Vector3 startPos;
     public Timer timer;
     public Transform alien;
     public Transform alien2;
     public bool canDrag;
+    //public MyAlien myalien;
 
     private void Start()
     {
@@ -58,6 +60,7 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         }
 
         this.GetComponent<CanvasGroup>().blocksRaycasts = true;
+        Debug.Log("BLCOKED");
     }
 
     public void DroppedOnAlien()
@@ -87,7 +90,43 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             case Meters.Curiosity1:
                 alien.GetComponent<MyAlienManager>().meters[2] += val;
                 break;
+            
+            case Meters.Null:
+                break;
+            
+            default:
+                break;
+            
+        }
+        switch (meter2)
+        {
+            case Meters.Hunger:
+                alien.GetComponent<MyAlienManager>().meters[0] += val2;
+                break;
 
+            case Meters.Happiness:
+                alien.GetComponent<MyAlienManager>().meters[1] += val2;
+                break;
+
+            case Meters.Curiosity:
+                alien.GetComponent<MyAlienManager>().meters[2] += val2;
+                break;
+
+            case Meters.Hunger1:
+                alien.GetComponent<MyAlienManager>().meters[0] += val2;
+                break;
+
+            case Meters.Happiness1:
+                alien.GetComponent<MyAlienManager>().meters[1] += val2;
+                break;
+
+            case Meters.Curiosity1:
+                alien.GetComponent<MyAlienManager>().meters[2] += val2;
+                break;
+            
+            case Meters.Null:
+                break;
+            
             default:
                 break;
             
@@ -123,6 +162,42 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
             case Meters.Curiosity1:
                 alien2.GetComponent<MyAlienManager>().meters[2] += val;
+                break;
+            
+            case Meters.Null:
+                break;
+
+            default:
+                break;
+            
+        }
+        switch (meter2)
+        {
+            case Meters.Hunger:
+                alien2.GetComponent<MyAlienManager>().meters[0] += val2;
+                break;
+
+            case Meters.Happiness:
+                alien2.GetComponent<MyAlienManager>().meters[1] += val2;
+                break;
+
+            case Meters.Curiosity:
+                alien2.GetComponent<MyAlienManager>().meters[2] += val2;
+                break;
+
+            case Meters.Hunger1:
+                alien2.GetComponent<MyAlienManager>().meters[0] += val2;
+                break;
+
+            case Meters.Happiness1:
+                alien2.GetComponent<MyAlienManager>().meters[1] += val2;
+                break;
+
+            case Meters.Curiosity1:
+                alien2.GetComponent<MyAlienManager>().meters[2] += val2;
+                break;
+            
+            case Meters.Null:
                 break;
 
             default:

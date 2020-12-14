@@ -11,9 +11,30 @@ public class AlienChange : MonoBehaviour
     public GameObject ShiftRoomPanel_alien1,ShiftRoomPanel_alien2;
     public GameObject Alien1, Alien2;
     public GameObject panel;
+    public Text statname1, statname2, statname3;
+    public Button Reset1, Reset2;
     public void Change()
     {
         panel.SetActive(true);
+    }
+
+    private void Update()
+    {
+        if (Alien1.activeInHierarchy)
+        {
+            statname1.text = "Hunger";
+            statname2.text = "Fun";
+            statname3.text = "Curiosity";
+            Reset1.gameObject.SetActive(true);
+            Reset2.gameObject.SetActive(false);
+        }
+
+        if (!Alien2.activeInHierarchy) return;
+        statname1.text = "Junk Food";
+        statname2.text = "Nerd";
+        statname3.text = "Shy";
+        Reset2.gameObject.SetActive(true);
+        Reset1.gameObject.SetActive(false);
     }
 
     public void Close()
@@ -28,6 +49,7 @@ public class AlienChange : MonoBehaviour
         panel.SetActive(false);
         ShiftRoomPanel_alien1.SetActive(false);
         ShiftRoomPanel_alien2.SetActive(true);
+        
     }
     public void ChangeAlien2()
     {
@@ -47,4 +69,5 @@ public class AlienChange : MonoBehaviour
     {
         SceneManager.LoadScene("PetAlien");
     }
+    
 }
