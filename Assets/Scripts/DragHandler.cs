@@ -3,26 +3,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UIElements;
 
 public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    public enum Meters { Hunger, Happiness, Curiosity, Hunger1, Happiness1, Curiosity1 , Null};
-    [SerializeField] int val;
-    [SerializeField] int val2;
+    public enum Meters { Trust};
+    public int val;
     [SerializeField] Meters meter;
-    [SerializeField] Meters meter2;
     Vector3 startPos;
     public Timer timer;
     public Transform alien;
     public Transform alien2;
     public bool canDrag;
-    //public MyAlien myalien;
-
+    public float Unlock;
+    
     private void Start()
     {
         canDrag = true;
     }
-    
+
+    private void Update()
+    {
+        if (alien.GetComponent<MyAlienManager>().meters[0] < Unlock)
+        {
+            this.GetComponent<CanvasGroup>().blocksRaycasts = false;
+            this.GetComponent<CanvasGroup>().alpha = 0.4f;
+        }
+        if (alien.GetComponent<MyAlienManager>().meters[0] > Unlock)
+        {
+            this.GetComponent<CanvasGroup>().blocksRaycasts = true;
+            this.GetComponent<CanvasGroup>().alpha = 1f;
+        }
+    }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -58,80 +70,33 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             MyAlien.OnSomethingDropped += DroppedOnAlien2;
             Debug.Log("hitted"+hit.transform.name);
         }
-
+        
         this.GetComponent<CanvasGroup>().blocksRaycasts = true;
         Debug.Log("BLCOKED");
     }
-
+    
     public void DroppedOnAlien()
     {
         switch (meter)
         {
-            case Meters.Hunger:
+            case Meters.Trust:
+                
                 alien.GetComponent<MyAlienManager>().meters[0] += val;
-                break;
-
-            case Meters.Happiness:
-                alien.GetComponent<MyAlienManager>().meters[1] += val;
-                break;
-
-            case Meters.Curiosity:
-                alien.GetComponent<MyAlienManager>().meters[2] += val;
-                break;
-
-            case Meters.Hunger1:
-                alien.GetComponent<MyAlienManager>().meters[0] += val;
-                break;
-
-            case Meters.Happiness1:
-                alien.GetComponent<MyAlienManager>().meters[1] += val;
-                break;
-
-            case Meters.Curiosity1:
-                alien.GetComponent<MyAlienManager>().meters[2] += val;
-                break;
-            
-            case Meters.Null:
+                
+                if (val > 0)
+                {
+                    alien.GetComponent<MyAlien>().valGreater = true;
+                }
+                if (val == 0)
+                {
+                    alien.GetComponent<MyAlien>().valGreater = false;
+                }
                 break;
             
             default:
                 break;
             
         }
-        switch (meter2)
-        {
-            case Meters.Hunger:
-                alien.GetComponent<MyAlienManager>().meters[0] += val2;
-                break;
-
-            case Meters.Happiness:
-                alien.GetComponent<MyAlienManager>().meters[1] += val2;
-                break;
-
-            case Meters.Curiosity:
-                alien.GetComponent<MyAlienManager>().meters[2] += val2;
-                break;
-
-            case Meters.Hunger1:
-                alien.GetComponent<MyAlienManager>().meters[0] += val2;
-                break;
-
-            case Meters.Happiness1:
-                alien.GetComponent<MyAlienManager>().meters[1] += val2;
-                break;
-
-            case Meters.Curiosity1:
-                alien.GetComponent<MyAlienManager>().meters[2] += val2;
-                break;
-            
-            case Meters.Null:
-                break;
-            
-            default:
-                break;
-            
-        }
-        
         if(timer!=null) timer.Time();
         MyAlien.OnSomethingDropped -= DroppedOnAlien;
     }
@@ -140,71 +105,14 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     {
         switch (meter)
         {
-            case Meters.Hunger:
+            case Meters.Trust:
                 alien2.GetComponent<MyAlienManager>().meters[0] += val;
-                break;
-
-            case Meters.Happiness:
-                alien2.GetComponent<MyAlienManager>().meters[1] += val;
-                break;
-
-            case Meters.Curiosity:
-                alien2.GetComponent<MyAlienManager>().meters[2] += val;
-                break;
-
-            case Meters.Hunger1:
-                alien2.GetComponent<MyAlienManager>().meters[0] += val;
-                break;
-
-            case Meters.Happiness1:
-                alien2.GetComponent<MyAlienManager>().meters[1] += val;
-                break;
-
-            case Meters.Curiosity1:
-                alien2.GetComponent<MyAlienManager>().meters[2] += val;
-                break;
-            
-            case Meters.Null:
                 break;
 
             default:
                 break;
             
         }
-        switch (meter2)
-        {
-            case Meters.Hunger:
-                alien2.GetComponent<MyAlienManager>().meters[0] += val2;
-                break;
-
-            case Meters.Happiness:
-                alien2.GetComponent<MyAlienManager>().meters[1] += val2;
-                break;
-
-            case Meters.Curiosity:
-                alien2.GetComponent<MyAlienManager>().meters[2] += val2;
-                break;
-
-            case Meters.Hunger1:
-                alien2.GetComponent<MyAlienManager>().meters[0] += val2;
-                break;
-
-            case Meters.Happiness1:
-                alien2.GetComponent<MyAlienManager>().meters[1] += val2;
-                break;
-
-            case Meters.Curiosity1:
-                alien2.GetComponent<MyAlienManager>().meters[2] += val2;
-                break;
-            
-            case Meters.Null:
-                break;
-
-            default:
-                break;
-            
-        }
-        
         if(timer!=null) timer.Time();
         MyAlien.OnSomethingDropped -= DroppedOnAlien2;
     }

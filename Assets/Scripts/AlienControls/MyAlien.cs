@@ -17,6 +17,7 @@ public class MyAlien : MonoBehaviour
     public List<Image> meters = new List<Image>();
     public bool notOnMe;
     public bool dropped = false;
+    public bool valGreater;
     float petDuration;
     
     // Start is called before the first frame update
@@ -68,9 +69,18 @@ public class MyAlien : MonoBehaviour
                 alien.sprite = faces[2];
             }
 
-            if (dropped==true)
+            if (dropped)
             {
-                StartCoroutine(ChangeOnDropped());
+                if (valGreater)
+                {
+                    StartCoroutine(ChangeOnDropped());
+                    //valGreater = false;
+                }
+                else if (valGreater == false)
+                {
+                    StartCoroutine(LessOnDropped());
+                }
+                
             }
         }
     }
@@ -88,7 +98,7 @@ public class MyAlien : MonoBehaviour
                     break;
 
                 case UserInteraction.Holding:
-                    alien.sprite = faces[1];
+                    //alien.sprite = faces[1];
                     petDuration += Time.deltaTime / 100.0f;
                     GetComponent<MyAlienManager>().meters[1] += petDuration;
                     break;
@@ -110,6 +120,12 @@ public class MyAlien : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         dropped = false;
     }
-    
+    IEnumerator LessOnDropped()
+    {
+        alien.sprite = faces[0];
+        Debug.Log("change");
+        yield return new WaitForSeconds(0.3f);
+        dropped = false;
+    }
     
 }

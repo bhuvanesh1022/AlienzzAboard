@@ -1,82 +1,86 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ClickHandler : MonoBehaviour
 {
-    public enum Meters { Hunger, Happiness, Curiosity, Null};
+    public enum Meters { Trust };
     [SerializeField] int val;
-    [SerializeField] int val2;
     [SerializeField] Meters meter;
-    [SerializeField] Meters meter2;
     public TimerClickable timer;
     public GameObject alien;
     public GameObject alien2;
+    public GameObject Bubble;
+    public Text Text;
+    public Image img;
+    public String emojiComment ;
+    public Sprite emojiIcon;
+    public float Unlock;
 
-    private void Start()
+    private void Update()
     {
-        
+        if (alien.GetComponent<MyAlienManager>().meters[0] < Unlock)
+        {
+            this.GetComponent<CanvasGroup>().interactable = false;
+        }
+        if (alien.GetComponent<MyAlienManager>().meters[0] > Unlock)
+        {
+            this.GetComponent<CanvasGroup>().interactable = true;
+        }
     }
 
     public void Onclick()
     {
-        Debug.Log("went");
+        StartCoroutine(speechReaction());
         if (alien.activeInHierarchy)
         {
             MyAlien.OnSomethingDropped += InteractionOnAlien;
             MyAlien.OnSomethingDropped.Invoke();
-            //MyAlien.OnSomethingDropped -= InteractionOnAlien;
-            Debug.Log("int1");
+            
         }
         if (alien2.activeInHierarchy)
         {
             MyAlien.OnSomethingDropped += InteractionOnAlien2;
             MyAlien.OnSomethingDropped.Invoke();
-            //MyAlien.OnSomethingDropped -= InteractionOnAlien2;
-            Debug.Log("int2");
         }
-        //this.GetComponent<CanvasGroup>().blocksRaycasts = true;
+    }
+
+    IEnumerator speechReaction()
+    {
+        if (Bubble.activeInHierarchy)
+        {
+            Text.text = emojiComment;
+            if (emojiIcon != null)
+            {
+                img.sprite = emojiIcon;
+            }
+            yield return new WaitForSeconds(1f);
+            img.sprite = null;
+            Bubble.SetActive(false);
+        }
+        else if (!Bubble.activeInHierarchy)
+        {
+            Text.text = emojiComment;
+            if (emojiIcon!= null)
+            {
+                img.sprite = emojiIcon;
+            }
+            Bubble.SetActive(true);
+            yield return new WaitForSeconds(1f);
+            img.sprite = null;
+            Bubble.SetActive(false);
+        }
     }
 
     public void InteractionOnAlien()
     {
         switch (meter)
         {
-            case Meters.Hunger:
+            case Meters.Trust:
                 alien.GetComponent<MyAlienManager>().meters[0] += val;
                 Debug.Log("hunger");
-                break;
-
-            case Meters.Happiness:
-                alien.GetComponent<MyAlienManager>().meters[1] += val;
-                break;
-
-            case Meters.Curiosity:
-                alien.GetComponent<MyAlienManager>().meters[2] += val;
-                break;
-            
-            case Meters.Null:
-                break;
-            
-            default:
-                break;
-            
-        }
-        switch (meter2)
-        {
-            case Meters.Hunger:
-                alien.GetComponent<MyAlienManager>().meters[0] += val2;
-                break;
-
-            case Meters.Happiness:
-                alien.GetComponent<MyAlienManager>().meters[1] += val2;
-                break;
-
-            case Meters.Curiosity:
-                alien.GetComponent<MyAlienManager>().meters[2] += val2;
-                break;
-            
-            case Meters.Null:
                 break;
             
             default:
@@ -92,47 +96,15 @@ public class ClickHandler : MonoBehaviour
     {
         switch (meter)
         {
-            case Meters.Hunger:
+            case Meters.Trust:
                 alien2.GetComponent<MyAlienManager>().meters[0] += val;
                 break;
-
-            case Meters.Happiness:
-                alien2.GetComponent<MyAlienManager>().meters[1] += val;
-                break;
-
-            case Meters.Curiosity:
-                alien2.GetComponent<MyAlienManager>().meters[2] += val;
-                break;
-            
-            case Meters.Null:
-                break;
             
             default:
                 break;
             
         }
-        switch (meter2)
-        {
-            case Meters.Hunger:
-                alien2.GetComponent<MyAlienManager>().meters[0] += val2;
-                break;
 
-            case Meters.Happiness:
-                alien2.GetComponent<MyAlienManager>().meters[1] += val2;
-                break;
-
-            case Meters.Curiosity:
-                alien2.GetComponent<MyAlienManager>().meters[2] += val2;
-                break;
-            
-            case Meters.Null:
-                break;
-            
-            default:
-                break;
-            
-        }
-        
         if(timer!=null) timer.Time();
         MyAlien.OnSomethingDropped -= InteractionOnAlien2;
     }

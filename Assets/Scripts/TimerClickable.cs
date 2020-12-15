@@ -73,9 +73,6 @@ public class TimerClickable : MonoBehaviour
     {
         lastClicked = (ulong)DateTime.Now.Ticks;
         PlayerPrefs.SetString(string.Format("{0} Clicked", orderNo), lastClicked.ToString());
-       // .raycastTarget = false;
-        //float a = interactable.color.a;
-        //interactable.color = new Color(interactable.color.r, interactable.color.g, interactable.color.b, .5f);
         Btn.interactable = false;
     }
 }

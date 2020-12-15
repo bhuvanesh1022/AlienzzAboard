@@ -20,31 +20,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76486ccf-89bd-47ea-8bde-8dcd2f3ab896" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AlienzzAboard/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AlienzzAboard/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/859503-200.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/859503-200.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/Speech-Bubble-PNG-715x715.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/Speech-Bubble-PNG-715x715.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/Square.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/Square.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/kisspng-padlock-clip-art-liberty-locks-5b354a16c2dc35.2314060715302190307982.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/kisspng-padlock-clip-art-liberty-locks-5b354a16c2dc35.2314060715302190307982.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/noun_Bird_1711227.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/noun_Bird_1711227.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/noun_Fire Extinguisher_3081615.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/noun_Fire Extinguisher_3081615.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/noun_Heart_16863.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/noun_Heart_16863.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/noun_In love emoji_859452.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/noun_In love emoji_859452.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/noun_Phone_3652908.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/noun_Phone_3652908.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/noun_Roller Coaster_164834.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/noun_Roller Coaster_164834.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/noun_high five_638730.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/noun_high five_638730.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/noun_hug_2522670.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/noun_hug_2522670.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/noun_ice berg_3172920.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/noun_ice berg_3172920.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/noun_santa_1456501.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/noun_santa_1456501.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/noun_soap_1376771.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/noun_soap_1376771.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/noun_stars_92377.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ui/noun_stars_92377.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AlienzzAboard/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AlienzzAboard/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AlienzzAboard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AlienzzAboard/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Lean/UIControls/Room1Panel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lean/UIControls/Room1Panel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OnClickOpen.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OnClickOpen.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/PetAlien.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PetAlien.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AlienChange.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AlienChange.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AlienControls/MyAlien.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AlienControls/MyAlien.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AlienControls/MyAlienManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AlienControls/MyAlienManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClickHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClickHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/DragHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DragHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OnClickOpen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OnClickOpen.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/TimerClickable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TimerClickable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/quit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/quit.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ui/Group 31.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ui/Group 31.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ui/Group 33.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ui/Group 33.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ui/Mask Group 4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ui/Mask Group 4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ui/MoMoMozo_Idle_Colour_Full.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ui/MoMoMozo_Idle_Colour_Full.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ui/Ognie_Happy_Colour_IphoneXS.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ui/Ognie_Happy_Colour_IphoneXS.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +72,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ClickHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TimerClickable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Downloads/SpriteGlow-master/Assets/Scripts/CardManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/SpriteGlow-master/Assets/Scripts/CardManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AlienChange.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/SpriteGlow-master/Assets/Scripts/CardController.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -71,17 +86,17 @@
         <option value="$PROJECT_DIR$/Assets/Lean/UIControls/Base_UIPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Lean/UIControls/DecayTimer.cs" />
         <option value="$PROJECT_DIR$/Assets/Lean/UIControls/Room1Panel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AlienControls/MyAlien.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AlienChange.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AlienControls/MyAlienManager.cs" />
         <option value="$PROJECT_DIR$/Assets/OnClickOpen.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/OnClickOpen.cs" />
         <option value="$PROJECT_DIR$/Assets/Lean/UIControls/Timer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/DragHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/TimerClickable.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ClickHandler.cs" />
         <option value="$USER_HOME$/Downloads/SpriteGlow-master/Assets/Scripts/CardController.cs" />
         <option value="$USER_HOME$/Downloads/SpriteGlow-master/Assets/Scripts/CardManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TimerClickable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AlienChange.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DragHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ClickHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AlienControls/MyAlien.cs" />
       </list>
     </option>
   </component>
@@ -149,6 +164,9 @@
       <workItem from="1607574508375" duration="4164000" />
       <workItem from="1607595185510" duration="2898000" />
       <workItem from="1607659869237" duration="2687000" />
+      <workItem from="1607939420311" duration="2789000" />
+      <workItem from="1608004838238" duration="6198000" />
+      <workItem from="1608013680519" duration="1434000" />
     </task>
     <servers />
   </component>
@@ -174,11 +192,11 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="28" width="1440" height="872" key="VCS.FileHistoryDialog" timestamp="1606887139088">
+    <state x="0" y="28" width="1440" height="872" key="VCS.FileHistoryDialog" timestamp="1607946708483">
       <screen x="0" y="25" width="1440" height="825" />
     </state>
     <state x="0" y="28" width="1440" height="872" key="VCS.FileHistoryDialog/0.0.1440.900@0.0.1440.900" timestamp="1606886967552" />
-    <state x="0" y="28" width="1440" height="872" key="VCS.FileHistoryDialog/0.25.1440.825@0.25.1440.825" timestamp="1606887139088" />
+    <state x="0" y="28" width="1440" height="872" key="VCS.FileHistoryDialog/0.25.1440.825@0.25.1440.825" timestamp="1607946708483" />
     <state x="351" y="82" width="738" height="735" key="find.popup" timestamp="1607575824586">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
