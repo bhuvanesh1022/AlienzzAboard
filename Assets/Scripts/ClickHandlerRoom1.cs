@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ClickHandler : MonoBehaviour
+public class ClickHandlerRoom1 : MonoBehaviour
 {
     public enum Meters { Trust};
     [SerializeField] int val;
@@ -12,22 +12,27 @@ public class ClickHandler : MonoBehaviour
     public TimerClickable timer;
     public GameObject alien;
     public GameObject alien2;
-    public GameObject Bubble;
-    public Image img;
-    public Sprite emojiIcon;
     public float Unlock;
-
+    public GameObject buildmoretrustTxt;
     private void Update()
-    {
+    { 
         if (alien.activeInHierarchy)
         {
             if (alien.GetComponent<MyAlienManager>().meters[0] < Unlock)
             {
                 this.GetComponent<CanvasGroup>().interactable = false;
+                if (buildmoretrustTxt != null)
+                {
+                    buildmoretrustTxt.SetActive(true);
+                }
             }
             if (alien.GetComponent<MyAlienManager>().meters[0] > Unlock)
             {
                 this.GetComponent<CanvasGroup>().interactable = true;
+                if (buildmoretrustTxt != null)
+                {
+                    buildmoretrustTxt.SetActive(false);
+                }
             }
         }
 
@@ -36,10 +41,18 @@ public class ClickHandler : MonoBehaviour
             if (alien2.GetComponent<MyAlienManager>().meters[0] < Unlock)
             {
                 this.GetComponent<CanvasGroup>().interactable = false;
+                if (buildmoretrustTxt != null)
+                {
+                    buildmoretrustTxt.SetActive(true);
+                }
             }
             if (alien2.GetComponent<MyAlienManager>().meters[0] > Unlock)
             {
                 this.GetComponent<CanvasGroup>().interactable = true;
+                if (buildmoretrustTxt != null)
+                {
+                    buildmoretrustTxt.SetActive(true);
+                }
             }
         }
     }
@@ -57,18 +70,8 @@ public class ClickHandler : MonoBehaviour
             MyAlien.OnSomethingDropped += InteractionOnAlien2;
             MyAlien.OnSomethingDropped.Invoke();
         }
-        StartCoroutine(speechReaction());
     }
-
-    IEnumerator speechReaction()
-    {
-        img.sprite = emojiIcon;
-        Bubble.SetActive(true);
-        yield return new WaitForSeconds(1.2f);
-        img.sprite = null;
-        Bubble.SetActive(false);
-    }
-
+    
     public void InteractionOnAlien()
     {
         switch (meter)
