@@ -9,7 +9,7 @@ public class Room1Panel : Base_UIPanel
     public GameObject nextBtn, prevBtn;
     public List<Transform> itemHolders = new List<Transform>();
     Transform itemHolderParent;
-
+    public List<DragHandler> draghandler = new List<DragHandler>();
     public override void OpenBehavior()
     {
         base.OpenBehavior();

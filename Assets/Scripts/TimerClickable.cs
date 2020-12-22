@@ -17,7 +17,6 @@ public class TimerClickable : MonoBehaviour
         ulong diff = ((ulong)DateTime.Now.Ticks - lastClicked);
         ulong m = diff / TimeSpan.TicksPerMillisecond;
         float secondsleft = (float)(msToWait - m) / 1000.0f;
-        Debug.Log(secondsleft);
 
         if (secondsleft < 0)
         {
@@ -53,14 +52,13 @@ public class TimerClickable : MonoBehaviour
             ulong diff = ((ulong) DateTime.Now.Ticks - lastClicked);
             ulong m = diff / TimeSpan.TicksPerMillisecond;
             float secondsleft = (float)(msToWait - m) / 1000.0f;
-            Debug.Log(secondsleft);
             string r = "";
             //hrs
             //r += ((int) secondsleft / 3600).ToString() + "h ";
             secondsleft -= ((int) secondsleft / 3600) * 3600;
             
             //min
-            r += ((int) secondsleft / 60).ToString("00") + "m ";
+            //r += ((int) secondsleft / 60).ToString("00") + "m ";
             
             //sec
             r += (secondsleft % 60).ToString("00") + "s";

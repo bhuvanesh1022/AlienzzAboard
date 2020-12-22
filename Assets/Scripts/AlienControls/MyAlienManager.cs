@@ -25,7 +25,7 @@ public class MyAlienManager : MonoBehaviour
         {
             if (meters[i] > 0)
             {
-
+                meters[i] = Mathf.Clamp(meters[i], 0, 100);
             }
         }
     }

@@ -13,27 +13,39 @@ public class ClickHandler : MonoBehaviour
     public GameObject alien;
     public GameObject alien2;
     public GameObject Bubble;
-    public Text Text;
     public Image img;
-    public String emojiComment ;
     public Sprite emojiIcon;
     public float Unlock;
 
     private void Update()
     {
-        if (alien.GetComponent<MyAlienManager>().meters[0] < Unlock)
+        if (alien.activeInHierarchy)
         {
-            this.GetComponent<CanvasGroup>().interactable = false;
+            if (alien.GetComponent<MyAlienManager>().meters[0] < Unlock)
+            {
+                this.GetComponent<CanvasGroup>().interactable = false;
+            }
+            if (alien.GetComponent<MyAlienManager>().meters[0] > Unlock)
+            {
+                this.GetComponent<CanvasGroup>().interactable = true;
+            }
         }
-        if (alien.GetComponent<MyAlienManager>().meters[0] > Unlock)
+
+        if (alien2.activeInHierarchy)
         {
-            this.GetComponent<CanvasGroup>().interactable = true;
+            if (alien2.GetComponent<MyAlienManager>().meters[0] < Unlock)
+            {
+                this.GetComponent<CanvasGroup>().interactable = false;
+            }
+            if (alien2.GetComponent<MyAlienManager>().meters[0] > Unlock)
+            {
+                this.GetComponent<CanvasGroup>().interactable = true;
+            }
         }
     }
 
     public void Onclick()
     {
-        StartCoroutine(speechReaction());
         if (alien.activeInHierarchy)
         {
             MyAlien.OnSomethingDropped += InteractionOnAlien;
@@ -45,33 +57,20 @@ public class ClickHandler : MonoBehaviour
             MyAlien.OnSomethingDropped += InteractionOnAlien2;
             MyAlien.OnSomethingDropped.Invoke();
         }
+        StartCoroutine(speechReaction());
     }
 
     IEnumerator speechReaction()
     {
-        if (Bubble.activeInHierarchy)
-        {
-            Text.text = emojiComment;
-            if (emojiIcon != null)
-            {
-                img.sprite = emojiIcon;
-            }
-            yield return new WaitForSeconds(1f);
-            img.sprite = null;
-            Bubble.SetActive(false);
-        }
-        else if (!Bubble.activeInHierarchy)
-        {
-            Text.text = emojiComment;
-            if (emojiIcon!= null)
-            {
-                img.sprite = emojiIcon;
-            }
-            Bubble.SetActive(true);
-            yield return new WaitForSeconds(1f);
-            img.sprite = null;
-            Bubble.SetActive(false);
-        }
+        img.sprite = emojiIcon;
+        // if (emojiIcon!= null)
+        // {
+        //     img.sprite = emojiIcon;
+        // }
+        Bubble.SetActive(true);
+        yield return new WaitForSeconds(1.2f);
+        img.sprite = null;
+        Bubble.SetActive(false);
     }
 
     public void InteractionOnAlien()
@@ -80,6 +79,15 @@ public class ClickHandler : MonoBehaviour
         {
             case Meters.Trust:
                 alien.GetComponent<MyAlienManager>().meters[0] += val;
+                alien.GetComponent<MyAlien>().dropped = true;
+                if (val > 0)
+                {
+                    alien.GetComponent<MyAlien>().valGreater = true;
+                }
+                if (val == 0)
+                {
+                    alien.GetComponent<MyAlien>().valGreater = false;
+                }
                 Debug.Log("hunger");
                 break;
             
@@ -87,7 +95,7 @@ public class ClickHandler : MonoBehaviour
                 break;
             
         }
-        
+        alien.GetComponent<MyAlien>().valshow = val;
         if(timer!=null) timer.Time();
         MyAlien.OnSomethingDropped -= InteractionOnAlien;
     }
@@ -98,13 +106,22 @@ public class ClickHandler : MonoBehaviour
         {
             case Meters.Trust:
                 alien2.GetComponent<MyAlienManager>().meters[0] += val;
+                if (val > 0)
+                {
+                    alien2.GetComponent<MyAlien>().valGreater = true;
+                }
+                if (val == 0)
+                {
+                    alien2.GetComponent<MyAlien>().valGreater = false;
+                }
                 break;
             
             default:
                 break;
             
         }
-
+        alien2.GetComponent<MyAlien>().dropped = true;
+        alien2.GetComponent<MyAlien>().valshow = val;
         if(timer!=null) timer.Time();
         MyAlien.OnSomethingDropped -= InteractionOnAlien2;
     }

@@ -22,8 +22,7 @@ public class DecayTimer : MonoBehaviour
 
             ulong diff = ((ulong)DateTime.Now.Ticks - lastClicked);
             float elepseSeconds = (diff / TimeSpan.TicksPerMillisecond)/1000f;
-
-            Debug.Log("elepseSeconds " + elepseSeconds);
+            
 
             alien.meters[orderNo] -= Mathf.Clamp(elepseSeconds * decayRate, 0f, 100f);
             if (alien.meters[orderNo] < 0)
@@ -60,9 +59,7 @@ public class DecayTimer : MonoBehaviour
 
             ulong diff = ((ulong)DateTime.Now.Ticks - lastClicked);
             float elepseSeconds = (diff / TimeSpan.TicksPerMillisecond) / 1000f;
-
-            Debug.Log("elepseSeconds " + elepseSeconds);
-
+            
             alien.meters[orderNo] -= elepseSeconds * decayRate;
             if (alien.meters[orderNo] < 0)
                 alien.meters[orderNo] = 0;

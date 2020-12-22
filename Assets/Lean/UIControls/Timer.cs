@@ -64,7 +64,7 @@ public class Timer : MonoBehaviour
             secondsleft -= ((int) secondsleft / 3600) * 3600;
             
             //min
-            r += ((int) secondsleft / 60).ToString("00") + "m ";
+            //r += ((int) secondsleft / 60).ToString("00") + "m ";
             
             //sec
             r += (secondsleft % 60).ToString("00") + "s";
